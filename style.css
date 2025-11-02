@@ -1,25 +1,142 @@
-#modal{
-    display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  background-color: rgba(0,0,0,0.4); 
-}
-#modalContent {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+/* Reset styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
+/* Page styling */
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  text-align: center;
+  padding: 40px;
+}
+
+/* Heading */
+h2 {
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Input and button styles */
+#inpName {
+  padding: 10px;
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#inpName:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+#addNameBtn,
+#selectBtn {
+  padding: 10px 16px;
+  margin-left: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#addNameBtn:hover,
+#selectBtn:hover {
+  background-color: #0056b3;
+}
+
+/* List container */
+#namesStock {
+  margin-top: 20px;
+}
+
+#list {
+  list-style-type: none;
+  margin-top: 10px;
+  padding: 0;
+}
+
+#list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  width: 200px;
+  margin: auto;
+}
+
+/* Paragraph before magic button */
+p {
+  margin: 25px 0 10px 0;
+}
+
+/* Modal styling */
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.8);
+  display: flex; /* center content */
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  visibility: hidden; /* hidden initially */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+
+
+#modalContent {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease;
+  position: relative;
+
+}
+
+/* Delete button inside modal */
+#deleteBtn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#deleteBtn:hover {
+  background-color: #b02a37;
+}
+
+/* The Close Button */
+#closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
   font-weight: bold;
+  color: gray;
+  cursor: pointer;
+}
+
+#closeBtn:hover,
+#closeBtn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
