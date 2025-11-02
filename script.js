@@ -23,10 +23,7 @@ function hideModal() {
     modal.style.visibility = "hidden";
 }
 
-// Page load
-window.onload = function() {
-    hideModal();
-};
+
 
 // Add new name
 addNameBtn.addEventListener("click", function addition() {
